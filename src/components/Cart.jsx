@@ -2,6 +2,7 @@ import { getFirestore, addDoc, collection } from 'firebase/firestore'
 import { Link } from "react-router-dom"
 import { useCartContext } from "../context/CartContext"
 import ItemCart from "./ItemCart"
+import styles from './Styles/Cart.module.css'
 
 const Cart = () => {
   const { cart, totalPrice } = useCartContext()
@@ -26,23 +27,30 @@ const Cart = () => {
 
   if (cart.length === 0) {
     return (
-      <>
-        <p>No hay elementos en el carrito</p>
-        <Link to={'/'}>Hacer compras</Link>
-      </>
-    )
+      <div className="container">
+        <div className={styles.cart__empty}>
+          <img src="https://i.postimg.cc/Df6hwJCp/empty-cart.png" alt="" />
+          <p>
+            No hay productos en el carrito
+          </p>
+          <Link className={styles.cart__empty__btn} to={"/"}>Ir a los productos</Link>
+        </div>
+      </div>
+    );
   }
 
   return (
     <>
-      {
-        cart.map(product => <ItemCart key={product.id} product={product} />)
-      }
-      <p>
-        total: {totalPrice()}
-      </p>
-      <button onClick={handleBuy}>Emitir compra</button>
+      {cart.map((product) => (
+        <ItemCart key={product.id} product={product} />
+      ))}
+      <div className={styles.buy__container}>
+        <p className={styles.buy__total}>Total: {totalPrice()}</p>
+        <button className={styles.buy__btn} onClick={handleBuy}>
+          Emitir compra
+        </button>
+      </div>
     </>
-  )
+  );
 }
 export default Cart

@@ -1,7 +1,20 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* Variables */
+:root {
+  --primary-color: #4B89AC;
+  --secondary-color: #99DFEC;
+  --terciary-color: #ACE6F6;
+  --white-color: #E4FCF9;
+}
+
+
 /* Reset */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 *,
@@ -16,6 +29,7 @@ ul {
 }
 a {
     text-decoration: none;
+    color: #000;
 }
 img {
     max-width: 100%;
@@ -26,4 +40,20 @@ img {
     max-width: 110rem;
     width: 90%;
     margin: 0 auto;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.items {
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 5rem;
+  }
 }

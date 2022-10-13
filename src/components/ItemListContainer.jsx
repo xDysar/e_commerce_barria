@@ -23,9 +23,9 @@ const ItemListContainer = () => {
   
 
   return (
-    <>
+    <div className="container">
       <ItemList data={data} />
-    </>
+    </div>
   );
 };
 export default ItemListContainer;

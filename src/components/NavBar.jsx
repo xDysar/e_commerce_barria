@@ -14,12 +14,15 @@ const NavBar = () => {
           <li className={styles.nav__item}>
             <Link className={styles.nav__link} to={'/'}>Inicio</Link>
           </li>
-          <li className={styles.nav__item}>
+          <li>
+            <Link className={styles.nav__link} to={'/productos'}>Productos</Link>
+          </li>
+          {/* <li className={styles.nav__item}>
             <Link className={styles.nav__link} to={'/categoria/films'}>Peliculas</Link>
           </li>
           <li className={styles.nav__item}>
             <Link className={styles.nav__link} to={'/categoria/series'}>Series</Link>
-          </li>
+          </li> */}
           <li className={styles.nav__item}>
             <Link className={styles.nav__link} to={'/carrito'}>
               <CartWidget />

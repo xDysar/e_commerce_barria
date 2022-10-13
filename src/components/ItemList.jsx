@@ -2,7 +2,9 @@ import Item from "./Item"
 
 const ItemList = ({data = []}) => {
   return (
-    data.map(film => <Item key={film.id} info={film} />)
+    <div className="items">
+    {data.map(product => <Item key={product.id} info={product} />)}
+    </div>
   )
 }
 export default ItemList

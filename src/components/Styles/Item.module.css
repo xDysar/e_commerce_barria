@@ -1,10 +1,33 @@
-.film {
-  display: block;
-  width: 30rem;
+.item {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  border-radius: 1rem;
 }
 
-.film img {
+.item img {
   width: 100%;
   height: 100%;
+  border-radius: 1rem;
   object-fit: cover;
+}
+
+.item__btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  padding: 1.3rem 3rem;
+  text-align: center;
+  color: var(--white-color);
+  border-radius: 1rem;
+  font-size: 1.6rem;
+}
+
+.item p {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 1rem 0;
 }

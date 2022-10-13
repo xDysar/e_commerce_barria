@@ -1,0 +1,7 @@
+.products {
+  height: 100vh;
+}
+
+.products__link {
+  font-size: 2.5rem;
+}
