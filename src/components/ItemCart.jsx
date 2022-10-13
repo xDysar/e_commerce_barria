@@ -10,7 +10,7 @@ const ItemCart = ({ product }) => {
       <div>
         <p className={styles.buy__text}>Titulo: {product.title}</p>
         <p className={styles.buy__text}>Cantidad: {product.quantity}</p>
-        <p className={styles.buy__text}>Precio u.: {product.price}</p>
+        <p className={styles.buy__text}>Precio unidad: {product.price}</p>
         <p className={styles.buy__text}>Subtotal: ${product.quantity * product.price}</p>
         <button
           className={styles.buy__btn}

@@ -15,20 +15,31 @@ const ItemDetail = ({ data }) => {
 
 
   return (
-    <div className='container'>
+    <div className="container">
       <div className={styles.detail}>
-        <img className={styles.detail__image} src={data.image} alt={data.title} />
+        <img
+          className={styles.detail__image}
+          src={data.image}
+          alt={data.title}
+        />
         <div className={styles.detail__content}>
           <h2 className={styles.detail__title}>{data.title}</h2>
           <p className={styles.detail__description}>{data.description}</p>
-          {
-            goToCart 
-              ?<Link className={styles.detail__finish_buy} to={'/carrito'}>Terminar compra</Link>
-              :<ItemCount initial={1} stock={5} onAdd={onAdd} />
-          }
+          {goToCart ? (
+            <>
+              <Link className={styles.detail__finish_buy} to={"/carrito"}>
+                Terminar compra
+              </Link>
+              <Link className={styles.detail__finish_buy} to={"/"}>
+                Seguir comprando
+              </Link>
+            </>
+          ) : (
+            <ItemCount initial={1} stock={5} onAdd={onAdd} />
+          )}
         </div>
       </div>
     </div>
-  )
+  );
 }
 export default ItemDetail

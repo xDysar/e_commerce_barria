@@ -40,7 +40,7 @@ const Cart = () => {
   }
 
   return (
-    <>
+    <div className='container'>
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
@@ -50,7 +50,7 @@ const Cart = () => {
           Emitir compra
         </button>
       </div>
-    </>
+    </div>
   );
 }
 export default Cart

@@ -37,6 +37,8 @@
   color: var(--white-color);
   padding: 1.3rem 1rem;
   border: none;
+  font-size: 2rem;
   display: inline-block;
   color: var(--black);
+  margin: 1rem;
 }
